@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://global.media.stuxie.dev/logo.png" height="80" alt="StuxieDev Logo">
+  <img src="https://global.media.robo.st/logo.png" width="300" alt="RoboStux">
 </p>
 
 # Contributing to robostux.github.io
