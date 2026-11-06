@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.06
+
+### Changed
+
+- `README.md` now describes this repository (the robostux.github.io redirect to github.com/RoboStux, published by the Pages workflow) instead of the generic redirect template it was made from, which told readers to fork it and replace `example.com`, and claimed it preserved URL paths, which it doesn't
+- `README.md` and `CONTRIBUTING.md` show the RoboStux logo instead of the StuxieDev one, and the README's license line says (C) StuxieDev, and its footer matches the organisation profile's
+
 ## v26.10.23
 
 ### Added
