@@ -1,73 +1,47 @@
 <p align="center">
-  <img src="https://global.media.stuxie.dev/logo.png" height="100" alt="StuxieDev Logo">
+  <img src="https://global.media.robo.st/logo.png" width="300" alt="RoboStux">
 </p>
 
-# GitHub Pages Redirect
+# robostux.github.io
 
-A simple template for redirecting your GitHub Pages site (username.github.io) to your custom domain.
+The GitHub Pages site for the [RoboStux](https://github.com/RoboStux) organisation. Anyone who visits
+`https://robostux.github.io` is sent straight on to the organisation's page,
+[github.com/RoboStux](https://github.com/RoboStux). RoboStux's own website is [robo.st](https://robo.st).
 
-## Features
+## How it works
 
-- ✨ Lightweight and fast redirect solution
-- 🎯 Easy to set up in minutes
-- 📱 Works on all devices and browsers
-- 🔗 Preserves URL paths during redirect
+`index.html` is a single static page with a meta refresh (and a canonical link) pointing at
+`https://github.com/RoboStux`, so the redirect happens as soon as the page loads, with no JavaScript.
+`.github/workflows/pages.yml` publishes it to GitHub Pages, so the repository's **Settings → Pages → Source**
+must be **GitHub Actions**.
 
-## Quick Start
+To change where it sends people, edit these two lines in `index.html`:
 
-1. **Fork or use this template** to create a new repository named `username.github.io`
-2. **Update the domain** in the HTML file:
-   - Replace `example.com` with your actual domain
-3. **Enable GitHub Pages** in your repository settings
-4. **Visit** `https://username.github.io` to test the redirect
-
-## How It Works
-
-This template uses a simple HTML meta refresh to redirect visitors from your GitHub Pages URL to your custom domain. The redirect happens automatically when users visit your `username.github.io` page.
-
-## Installation
-
-### Option 1: Using as a Template
-1. Click **"Use this template"** on the GitHub repository page
-2. Name your repository `username.github.io` (replace `username` with your GitHub username)
-3. Customize the domain in `index.html`
-
-### Option 2: Manual Setup
-1. Create a new repository named `username.github.io`
-2. Copy the contents of this template to your repository
-3. Update the redirect URL in `index.html`
-4. Push to GitHub
-
-## Configuration
-
-Edit `index.html` and change this line:
 ```html
-<meta http-equiv="refresh" content="0;url=https://example.com" />
-<link rel="canonical" href="https://example.com" />
+<meta http-equiv="refresh" content="0;url=https://github.com/RoboStux" />
+<link rel="canonical" href="https://github.com/RoboStux" />
 ```
 
-Replace `https://example.com` with your actual domain.
+## Testing
 
-## Troubleshooting
+```bash
+bash tests/version.sh
+```
 
-- **Redirect not working?** Ensure your repository is named exactly `username.github.io` and GitHub Pages is enabled
-- **Need to change the redirect delay?** Modify the `content="0;url=..."` value (0 = immediate)
-- **Want to customize the loading page?** Edit the HTML content before the meta redirect tag
+Then open `index.html` in a browser and check that it lands on github.com/RoboStux.
 
 ## Versioning
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
+Releases are made on the `test` branch and go live when its pull request into `main` is merged; see [CONTRIBUTING.md](CONTRIBUTING.md#branches).
+
 ## License
 
-Feel free to use this template for your own projects!
-
-## Support
-
-Have questions? Check the [GitHub Pages documentation](https://pages.github.com/) or open an issue in this repository.
+(C) StuxieDev.
 
 ---
 
-Made by [StuxieDev](https://github.com/StuxieDev)
+*Written & Maintained by <img src="https://global.media.stuxie.dev/icon.png" height="14" alt="StuxieDev" valign="middle"> [StuxieDev](https://stuxie.dev).*
 
 *[A StuxieDev Project](https://projects.stuxie.dev)*
